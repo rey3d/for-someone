@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Page</title>
+    <script>
+        function checkPassword() {
+            // The correct password
+            const correctPassword = "mypassword";
+
+            // Get the user input
+            const userPassword = document.getElementById("password").value;
+
+            // Check if it matches
+            if (userPassword === correctPassword) {
+                // Show the secret message
+                document.getElementById("message").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="login">
+        <h1>Enter Password</h1>
+        <input type="password" id="password" placeholder="Enter the password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="message" style="display: none;">
+        <h1>Welcome!</h1>
+        <p>This is your secret message: *You are awesome!*</p>
+    </div>
+</body>
+</html>
